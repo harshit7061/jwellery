@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jewelry Collection</title>
+ <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #fff8e1;
+  color: #3e2723;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  color: #8d6e63;
+  background-color: #d4af37;
+  color: #ffffff;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.collection {
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #d4af37;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
+  color: #3e2723;
+  margin-bottom: 0.5rem;
+}
+
+.product-info p {
+  font-size: 0.9rem;
+  color: #8d6e63;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #d4af37;
+  color: #ffffff;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* General Styles */
+footer {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: left;
+        }
+
+        /* Store Info Styles */
+        .store-info {
+            text-align: center;
+        }
+
+        .store-name {
+            font-size: 2em;
+            color: #f2c04c;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .store-description {
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Section Headings */
+        .contact-section h4, .follow-us-section h4 {
+            font-size: 1.3em;
+            color: #f2c04c;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .contact-section p, .footer-bottom p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Social Icons Styling */
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            font-size: 1.1em;
+            color: #f2c04c;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #f2c04c;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            border-top: 1px solid #f2c04c;
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+
+ </style>
+</head>
+<body>
+ <!-- Back Button -->
+ <div style="padding: 10px;">
+    <a href="javascript:history.back()" style="text-decoration: none; color: #b18f4e; font-size: 1em; border: 1px solid #b18f4e; padding: 8px 12px; border-radius: 5px; transition: 0.3s; display: inline-block;">
+        &#8592; Back
+    </a>
+</div>
+  <header class="header">
+    <h1>Exclusive Jewelry Collection</h1>
+    <p>Discover our elegant selection of fine jewelry for every occasion.</p>
+  </header>
+
+  <section class="collection">
+    <!-- Women's Collection -->
+    <h2 class="section-title">Women's Collection</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="navigateToHome()">
+        <img src="il_570xN.4072592285_2kyn.webp" alt="Necklace">
+        <div class="product-info">
+          <h3>Necklace</h3>
+          <p>Elegant and stylish necklaces for all occasions.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="navigateToHome()">
+        <img src="images.jpeg" alt="Jhumka">
+        <div class="product-info">
+          <h3>Jhumka</h3>
+          <p>Traditional jhumkas with a modern twist.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="navigateToHome()">
+        <img src="beautiful-designer-party-wear-ad-earrings-500x500.webp" alt="Short Earring">
+        <div class="product-info">
+          <h3>Short Earring</h3>
+          <p>Chic earrings to complete any look.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="navigateToHome()">
+        <img src="diamonds.webp" alt="Ring">
+        <div class="product-info">
+          <h3>Ring</h3>
+          <p>Exquisite rings for every occasion.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Men's Collection -->
+    <h2 class="section-title">Men's Collection</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="navigateToHome()">
+        <img src="images (1).jpeg" alt="Men's Chain">
+        <div class="product-info">
+          <h3>Men's Chain</h3>
+          <p>Stylish chains for a bold statement.</p>
+        </div>
+      </div>
+      <div class="product-card" onclick="navigateToHome()">
+        <img src="il_570xN.3347055833_n3vp.webp" alt="Men's Bracelet">
+        <div class="product-info">
+          <h3>Men's Bracelet</h3>
+          <p>Elegant bracelets that redefine masculinity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <footer style="background-color: #f9f5e3; color: #333; padding: 40px 20px; font-family: 'Arial', sans-serif;">
+        <!-- Footer Container -->
+        <div class="footer-container">
+            <!-- Store Info Section -->
+            <div class="store-info">
+                <h3 class="store-name">Variety Junction</h3>
+                <p class="store-description">Elegant Jewelry for Every Occasion</p>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h4>Contact Us</h4>
+                <p>We're here to help you!</p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p>Email: <a href="mailto:info@varietyjunction.com">info@varietyjunction.com</a></p>
+            </div>
+    
+            <!-- Social Links Section -->
+            <div class="follow-us-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Variety Junction. All rights reserved.</p>
+        </div>
+       
+  </footer>
+
+  <script>
+    function navigateToHome() {
+  window.location.href = "index.html";
+}
+
+  </script>
+</body>
+</html>
